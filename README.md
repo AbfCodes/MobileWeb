@@ -12,3 +12,5 @@ create-react-app <project-name> ----> make a project with this cmd
 
 cd mobile_app
 npm start ----> will satrt a server on localHost
+
+    "react": "^16.9.0",//^ means version is updatable
