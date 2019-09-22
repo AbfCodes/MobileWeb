@@ -48,7 +48,11 @@
         <div>
           class less component {props.name} age : {props.age}
           <h1>subjects :</h1>
-          <ul>{props.subjects.map((val,index)=><li key={index}>{val}</li>);}</ul>
+          <ul>
+            {props.subjects.map((val, index) => (
+              <li key={index}>{val}</li>
+            ))}
+          </ul>
         </div>
       ); //class less OR Functional component (latest recommendation of 16.8.smthg)
 
