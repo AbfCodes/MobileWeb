@@ -4,11 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Hello World</title>
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
   </head>
+
   <body>
-    <div>
-      <ul></ul>
-    </div>
+    <div class="" id="root"></div>
+    <script type="text/babel">
+      //class
+      // class Hello extends React.Component {
+      //   render() {
+      //     console.log(this.props);
+      //     return (
+      //       <div>
+      //         <h1>
+      //           Hello , {this.props.name} ,{this.props.group}
+      //         </h1>
+      //       </div>
+      //     );
+      //   }
+      // }
+
+      // //class
+      // class Main extends React.Component {
+      //   // const name = "basit";
+      //   render() {
+      //     return (
+      //       <div>
+      //         <Hello name="basit" group="CS" />
+      //       </div>
+      //     );
+      //   }
+      // }
+      const Hello = props => (
+        <div>
+          class less component {props.name} age : {props.age}
+          <h1>subjects :</h1>
+          <ul>{props.subjects.map((val,index)=><li key={index}>{val}</li>);}</ul>
+        </div>
+      ); //class less OR Functional component (latest recommendation of 16.8.smthg)
+
+      const Main = () => {
+        return (
+          <Hello
+            name="basit"
+            age={20}
+            subjects={['calculus', 'ICS', 'physics']}
+          />
+        );
+      };
+
+      const ele = document.getElementById('root');
+      ReactDOM.render(<Main />, ele);
+    </script>
   </body>
 </html>
+
+<!-- 
+react k 2 compenets  bna k lane h
+1 login ka comp
+2 singin ka comp-->
